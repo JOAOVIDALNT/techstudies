@@ -1,5 +1,5 @@
 {
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "newFileLocation": "current",
   "attachmentFolderPath": ".//assets"
 }
