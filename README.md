@@ -26,13 +26,13 @@ Everything about data-science such as Python, TensorFlow, Transformers, etc..
 │   ├── php
 │   └── databases
 │
-├── data-science
-│   ├── machine-learning
-│   ├── deep-learning
-│   └── data-visualization
+├── datascience
+│   ├── machine_learning
+│   ├── deep_learning
+│   └── data_visualization
 │
 ├── devops
-│   ├── ci-cd
+│   ├── ci_cd
 │   ├── containers
 │   └── os
 │
