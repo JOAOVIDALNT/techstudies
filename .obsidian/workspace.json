@@ -163,5 +163,9 @@
     }
   },
   "active": "6d6bc33d9f215cd9",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "frontend/README.md",
+    "backend/README.md",
+    "data-science/README.md"
+  ]
 }
