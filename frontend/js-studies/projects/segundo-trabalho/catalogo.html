@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="JS/index.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header id="header">
+    <form>
+      <div>
+        <input type="text" placeholder="Digite aqui" id="pesquisa" name="pesquisa">
+      </div>
+    </form>
+    <a href="index.html" target="_self">
+      <img src="imagens/Sem.png" width="80px">
+    </a>
+    <p id="cliente"><a href="cliente.html">CLIENTE</a></p>
+  </header>
+  <main>
+    <section>
+      <ul class="menu">
+        <li class="menu"><a href="#" onclick="loadContent('bancoDados.html')">BANCO DE DADOS</a></li>
+        <li class="menu"><a href="#" onclick="loadContent('javascript.html')">JAVASCRIPT</a></li>
+        <li class="menu"><a href="#" onclick="loadContent('htmlCss.html')">HTML/CSS</a></li>
+        <li class="menu"><a href="#" onclick="loadContent('webDesign.html')">WEB DESIGN</a></li>
+        <li class="menu"><a href="#" onclick="loadContent('ingles.html')">INGLÊS</a></li>
+        <li class="menu"><a href="listagem.html">LISTA DE PRODUTOS</a></li>
+      </ul><br>
+    </section>
+
+    <section>
+      <h1 id="catalogo">Catálogo</h1><br><br>
+
+      <section id="content">
+        <h2 class="tip" style="text-align: center; font-family: 'Roboto', sans-serif;">Banco de dados</h2><br>
+        <hr><br>
+
+        <section>
+          <h3 class="cat">Curso de Banco de dados e SQL</h3><br>
+
+          <ul>
+            <li>Guia básico sobre banco de dados e SQL</li><br>
+            <li>Realizar Backups e Restores dos seus Bancos de Dados</li><br>
+            <li>Criar bancos de dados consistentes do ponto de infraestrutura e modelagem.</li><br>
+            <li>Escolher as funções nativas de qualquer banco de dados, de acordo com a sua necessidade</li>
+          </ul>
+
+          <form>
+            <p style="text-align: center;">Você deseja obter o curso?</p>
+            <input type="submit" value="Comprar" class="botao">
+          </form><br>
+
+          <hr><br>
+        </section>
+
+        <section>
+          <h3 class="cat">SQL do básico ao avançado</h3><br>
+
+          <ul>
+            <li>Guia basico sobre banco de dados e SQL</li><br>
+            <li>Realizar Backups e Restores dos seus Bancos de Dados</li><br>
+            <li>Criar bancos de dados consistentes do ponto de infraestrutura e modelagem.</li><br>
+            <li>Escolher as funções nativas de qualquer banco de dados, de acordo com a sua necessidade</li>
+          </ul><br>
+
+          <form>
+            <p style="text-align: center;">Você deseja obter o curso?</p>
+            <input type="submit" value="Comprar" class="botao">
+          </form><br>
+
+          <hr><br>
+        </section>
+
+        <section>
+          <h3 class="cat">Curso básico de MySQL</h3>
+
+          <ul>
+            <li></li><br>
+            <li>Realizar Backups e Restores dos seus Bancos de Dados</li><br>
+            <li>Criar bancos de dados consistentes do ponto de infraestrutura e modelagem.</li><br>
+            <li>Escolher as funções nativas de qualquer banco de dados, de acordo com a sua necessidade</li>
+          </ul><br>
+
+          <form>
+            <p style="text-align: center;">Você deseja obter o curso?</p>
+            <input type="submit" value="Comprar" class="botao">
+          </form><br>
+
+          <hr><br>
+        </section>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <div id="rodape">
+      <ul>
+        <li id="endereço">Rua dos limoeiros nº10 </li>
+        <li id="cnpj">CNPJ:12341323</li>
+        <li id="tele">Telefone:99101-1313</li>
+        <li id="email">Email:cursoonline@gmail.com</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

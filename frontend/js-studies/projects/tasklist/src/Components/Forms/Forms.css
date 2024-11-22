@@ -1,0 +1,38 @@
+.formsBox{
+    width: 40vw;
+    height: 90vh;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.formsBox h1{
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.formsBox form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formsBox form input, .formsBox form select, .formsBox form textarea{
+    width: 80%;
+    height: 3rem;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 7px;
+    padding-left: 0.5rem;
+    margin: 0 10%;
+}
+
+.formsBox form label{
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem 10%;
+}
+
+.formsBox form textarea{
+    height: 5rem;
+    resize: vertical;
+    padding-top: 0.7rem;
+}

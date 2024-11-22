@@ -1,0 +1,48 @@
+.task{
+    width: 15rem;
+    height: 13rem;
+    display: grid;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.problemTitle{
+    width: 7rem;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-right:0.5rem;
+    grid-area: problemTitle;
+}
+
+.task .data{
+    font-size: 1rem;
+    grid-area: data;
+}
+
+.task .descricao{
+    height: 5.8rem;
+    padding-top: 0.5rem;
+    grid-area: descricao;
+}
+
+.task .departamento{ grid-area: departamento;}
+.task .line{ grid-area: line; }
+.task .problemName{ grid-area: problemName; }
+
+.task .departamento, .task .line, .task .problemName{
+    text-align: center;
+}
+
+.task{
+    grid-template-areas: 
+        'problemTitle problemTitle data'
+        'descricao descricao descricao'
+        'departamento line problemName'
+    ;
+}

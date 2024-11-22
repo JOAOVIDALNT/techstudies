@@ -1,0 +1,17 @@
+{
+    "name": "nybc/avg-sell",
+    "description": "Get avg of our products sell",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Nybc\\AvgSell\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Vidal",
+            "email": "dev.joaovidal@gmail.com"
+        }
+    ],
+    "require": {}
+}

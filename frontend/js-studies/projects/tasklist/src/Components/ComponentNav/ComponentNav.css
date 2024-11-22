@@ -1,0 +1,38 @@
+.componentNav{
+    width: 80%;
+    /* background-color: var(--blue-variable); */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+    margin: 0.5rem 10%;
+}
+
+.componentNav:hover{
+    cursor: pointer;
+}
+
+.componentNav img{
+    width: 2.5rem;
+}
+
+.componentNav p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-left: 0.7rem;
+}
+
+
+@media (max-width: 960px) {
+    .componentNav{
+        padding-left: 0;
+    }
+
+    .componentNav img{
+        width: 2rem;
+    }
+    .componentNav p{
+        font-size: 1rem;
+    }
+}

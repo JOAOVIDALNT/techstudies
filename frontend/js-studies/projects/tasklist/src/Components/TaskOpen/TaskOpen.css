@@ -1,0 +1,78 @@
+.taskOpen{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.taskOpen .sectionDiv{
+    width: 30rem;
+    height: 30rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 10px 10px 100px 10px var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+.sectionDiv header{
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskOpen ul{
+    width: 100%;
+    height: 70%;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.taskOpen ul li{
+    font-size: 1rem;
+    margin: 0.7rem 0;
+}
+
+.taskOpen ul .descricao{
+    margin-top: 2.5rem;
+}
+
+.taskOpen .servico{
+    width: 10rem;
+    height: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--orange-logo);
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 0.4rem 0;
+}
+
+.close{
+    width: 1.5rem;
+    height: 2rem;
+    display: block;
+}
+
+.close div{
+    width: 0.4rem;
+    height: 1.5rem;
+    position: absolute;
+    background-color: var(--gray-500);
+    border-radius: 2px;
+}
+
+.close div:first-child{
+    transform: rotate(40deg);
+}
+
+.close div:last-child{
+    transform: rotate(-40deg);
+}
+

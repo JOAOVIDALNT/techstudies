@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+  <cliente>
+    <nome>Amelie</nome>
+    <tipoPessoa>F</tipoPessoa>
+    <endereco>RUA DOS BOBOSO</endereco>
+    <numero>0</numero>
+    <bairro>Vila do Chaves</bairro>
+    <cep>780800</cep>
+    <cidade>São Paulo</cidade>
+    <uf>SP</uf>
+    <email>joao@gmail.com</email>
+  </cliente>
+  <itens>
+    <item>
+      <codigo>codigo0</codigo>
+      <descricao></descricao>
+      <un>un0</un>
+      <qtde>qtde0</qtde>
+      <vlr_unit>vlr_unit0</vlr_unit>
+      <tipo>tipo0</tipo>
+      <origem>origem0</origem>
+    </item>
+    <item>
+      <codigo>codigo1</codigo>
+      <descricao></descricao>
+      <un>un1</un>
+      <qtde>qtde1</qtde>
+      <vlr_unit>vlr_unit1</vlr_unit>
+      <tipo>tipo1</tipo>
+      <origem>origem1</origem>
+    </item>
+    <item>
+      <codigo>codigo2</codigo>
+      <descricao></descricao>
+      <un>un2</un>
+      <qtde>qtde2</qtde>
+      <vlr_unit>vlr_unit2</vlr_unit>
+      <tipo>tipo2</tipo>
+      <origem>origem2</origem>
+    </item>
+    <item>
+      <codigo>codigo3</codigo>
+      <descricao></descricao>
+      <un>un3</un>
+      <qtde>qtde3</qtde>
+      <vlr_unit>vlr_unit3</vlr_unit>
+      <tipo>tipo3</tipo>
+      <origem>origem3</origem>
+    </item>
+    <item>
+      <codigo>codigo4</codigo>
+      <descricao></descricao>
+      <un>un4</un>
+      <qtde>qtde4</qtde>
+      <vlr_unit>vlr_unit4</vlr_unit>
+      <tipo>tipo4</tipo>
+      <origem>origem4</origem>
+    </item>
+  </itens>
+</pedido>

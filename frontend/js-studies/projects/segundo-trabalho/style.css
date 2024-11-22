@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Roboto:wght@400;700&display=swap');
+
+  *{
+    margin: 0 auto;
+  }
+  #header{
+    background-color: black;
+    overflow: auto
+   }
+  #p1 {
+    padding-top: 18px;
+    background-color: rgb(70, 136, 193);
+    margin-bottom: 5rem;
+  }
+  li {
+    display: inline-table ;
+  }
+  .menu {
+    padding: 10px;
+    background-color:lightblue ;
+  }
+  a:link{
+    text-decoration:none;
+  }
+  #rodape{
+    background-color: lightblue;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    float: auto;
+    font-size: 19px;
+    font-family: "Century Gothic", CenturyGothic, AplleGothic, sans-serif;
+  }
+  #endereço{
+    padding: 20px;
+  }
+  #cnpj{
+    padding: 20px;
+  }
+  #tele{
+    padding: 20px;
+  }
+  form{
+    font-family:Arial;
+    display:center;
+    line-height: 2
+  }
+  form input{
+    display: inline-block;
+    width: 200px;
+  }
+  form div{
+    flex-direction: column;
+    margin-bottom: 10px;
+ }
+ form input, form textarea{
+  padding: 10px;
+  width: 240px;
+  border: 3px solid  lightblue;
+ }
+ form input[type=submit]{
+  background-color: lightblue;
+ }
+ form input:focus, forn textarea:focus{
+  background-color: lightblue;
+ }
+ form label{
+  margin-left: 20px;
+ 
+ }
+ #user{
+  font-family: Arial;
+  font-size:25px;
+  color: lightblue;
+  width: 500px;
+  padding: 20px;
+  display:flex;
+ }
+#cliente{
+  color: white;
+  text-align: left;
+  float: right;
+  margin-right: 10px; 
+}
+.descr{
+  padding-left:100px;
+  padding-bottom: 20px;
+  padding-right:100px;
+}
+.img{
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin-left: 20px;
+  float: left;
+  margin-right: 10px;
+}
+.titu{
+  padding-left: 10px;
+  color: lightblue;
+  font-family:Arial;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+a{
+  color:white;
+}
+.cat{
+  color: lightblue;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 15px;
+}
+.tip{
+  padding-left:14px;
+}
+#pesq{
+  color: white;
+}
+#pesquisa{
+  display:flex;
+  width:400px;
+
+}
+fieldset{
+  background-color: lightgray;
+  font-family:Arial;
+  font-size:20px;
+  padding: 10px 10px;
+  width:450px;
+  height:100px;
+}
+.fil{
+  font-family:Arial;
+  font-size:30px;
+}
+#pesquisa{
+  right:30px;
+}
+.lin{
+  color:blue;
+}
+.container {
+  overflow: auto;
+}
+.cont{
+  text-align: center
+}
+
+.title {
+  margin: 20px
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+li, legend {
+  font-family: 'Roboto', sans-serif;
+}
+
+#catalogo {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+#rodape {
+  margin-top: 20px;
+}
+
+.botao {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.botao:hover{
+  background-color: rgba(173, 216, 230, 0.781);
+}
+
+.titulo {
+  text-align: center;
+}
+
+section ul li a:hover{
+  color: rgba(56, 61, 63, 0.575);
+}

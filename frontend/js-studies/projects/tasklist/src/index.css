@@ -1,0 +1,46 @@
+:root{
+  /* Cores bases */
+  --black: #000;
+  --white: #F5F5F5;
+  --gray-300: #D9D9D9;
+  --gray-500: #969696;
+  --gray-background: #C2CFCD;
+
+  /* Cores NYBC */
+  --purple-logo: #4A3C85;
+  --yellow-logo: #F9C300;
+  --blue-logo: #0093DD;
+  --green-logo: #85C225;
+  --orange-logo: #E67815;
+
+  /* Variações das cores */
+  --blue-variable: #B6D1DF;
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-color: var(--gray-background);
+}
+
+.dashboard{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#root{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
