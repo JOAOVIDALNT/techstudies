@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "devops/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "devops/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "devops/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "devops/README.md"
               },
               "icon": "lucide-list",
               "title": "Outline of README"
@@ -164,6 +164,15 @@
   },
   "active": "6d6bc33d9f215cd9",
   "lastOpenFiles": [
+    "devops/assets/Pasted image 20241122134605.png",
+    "devops/assets",
+    "devops/Untitled.md",
+    "devops/README.md",
+    "backend/dotnet-studies/courses/udemy/dotnet-core/03-scrum/assets/Pasted image 20240229070833.png",
+    "backend/dotnet-studies/concepts/pagination/pagination.md",
+    "backend/dotnet-studies/concepts/middleware/middleware.md",
+    "backend/dotnet-studies/concepts/async/dependency_injection/di.md",
+    "README.md",
     "datascience/README.md",
     "datascience",
     "frontend/README.md",
