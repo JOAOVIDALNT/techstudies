@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "fab27b83a310e282",
+    "id": "2306a4523485f14b",
     "type": "split",
     "children": [
       {
-        "id": "f042cec27fbbc9b4",
+        "id": "b81f4a9e19726e6a",
         "type": "tabs",
         "children": [
           {
-            "id": "6d6bc33d9f215cd9",
+            "id": "bc06325478d8a33c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "backend/dotnet-studies/concepts/ddd/rich domain.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "rich domain"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "e3dc30c4ec7b8ba9",
+    "id": "0fa2aada3965f6bc",
     "type": "split",
     "children": [
       {
-        "id": "5ff562489ec14b9d",
+        "id": "bc3f54d717f53bee",
         "type": "tabs",
         "children": [
           {
-            "id": "2adff8e57a887099",
+            "id": "467e2c0257b73b4b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "71f45f4456a66df1",
+            "id": "576e8039f20a4039",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "e69070d10f5ead89",
+            "id": "af33f3273fbeec7b",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +77,19 @@
     "width": 300
   },
   "right": {
-    "id": "78ee7afc0b6ed005",
+    "id": "e92e0fb835c67245",
     "type": "split",
     "children": [
       {
-        "id": "f8664ea62f11df48",
+        "id": "d7564594cfe26756",
         "type": "tabs",
         "children": [
           {
-            "id": "0cdeb0c36b929589",
+            "id": "8105c84953ece19d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "devops/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,46 +99,49 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "a02151306302824c",
+            "id": "1ff62a2267030b3f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "devops/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "6e19e5a153e8aa84",
+            "id": "4a62ba99f5633c75",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "e352185678bfe36a",
+            "id": "9b4b5ed86443e2b1",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "devops/README.md"
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline"
             }
           }
         ]
@@ -163,34 +161,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d6bc33d9f215cd9",
-  "lastOpenFiles": [
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas/2025/06/XO.cs",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas/2025/06/OutlierNumber.cs",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas/2025/06",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas/Program.cs",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas/katas.csproj",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas/2025",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/kata_collection.sln",
-    "backend/dotnet-studies/challenges/codewars/kata_collection/katas",
-    "backend/dotnet-studies/challenges/codewars/kata_collection",
-    "backend/dotnet-studies/challenges/codewars",
-    "backend/ESCOPO.md",
-    "backend/dotnet-studies/concepts/dotnet-ef/orm/migrations.md",
-    "backend/dotnet-studies/concepts/ddd/rich domain.md",
-    "devops/README.md",
-    "backend/dotnet-studies/concepts/ddd",
-    "devops/assets/Pasted image 20241122134742.png",
-    "devops/assets/Pasted image 20241122134605.png",
-    "devops/Untitled.md",
-    "backend/dotnet-studies/courses/udemy/dotnet-core/03-scrum/assets/Pasted image 20240229070833.png",
-    "backend/dotnet-studies/concepts/pagination/pagination.md",
-    "backend/dotnet-studies/concepts/middleware/middleware.md",
-    "backend/dotnet-studies/concepts/async/dependency_injection/di.md",
-    "README.md",
-    "datascience/README.md",
-    "frontend/README.md",
-    "backend/README.md",
-    "data-science/README.md"
-  ]
+  "active": "bc06325478d8a33c",
+  "lastOpenFiles": []
 }
