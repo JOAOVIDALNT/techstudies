@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "devops/README.md",
+                "file": "backend/dotnet-studies/concepts/ddd/rich domain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "rich domain"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -164,11 +165,14 @@
   },
   "active": "6d6bc33d9f215cd9",
   "lastOpenFiles": [
+    "backend/dotnet-studies/concepts/dotnet-ef/orm/migrations.md",
+    "backend/dotnet-studies/concepts/ddd/rich domain.md",
+    "devops/README.md",
+    "backend/dotnet-studies/concepts/ddd",
     "devops/assets/Pasted image 20241122134742.png",
     "devops/assets/Pasted image 20241122134605.png",
     "devops/assets",
     "devops/Untitled.md",
-    "devops/README.md",
     "backend/dotnet-studies/courses/udemy/dotnet-core/03-scrum/assets/Pasted image 20240229070833.png",
     "backend/dotnet-studies/concepts/pagination/pagination.md",
     "backend/dotnet-studies/concepts/middleware/middleware.md",
