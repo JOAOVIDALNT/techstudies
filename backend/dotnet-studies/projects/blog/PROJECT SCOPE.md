@@ -59,3 +59,20 @@ After deadline, we want to keep improving the software, appying features like:
 - If email is valid BE Service communicate with email service to send it
 
 That's the fluxogram for the MVP, all features should be delivered until first project deadline (21/07/2025)
+
+
+### Entities
+
+**Post**
+- id
+- author string
+- slug
+- title
+- summary
+- content
+- publishedAt
+- tags
+
+**Tag**
+- id
+- name
