@@ -205,3 +205,114 @@ example
 // block -> the image is 'display:block' at 768px or less
 // md:hidden -> the image is 'display:none' at 768px or more
 ```
+
+## ROUTING
+Routing on next.js is pretty simple. Folders inside `app/` who contains a file named `page.tsx` will be a route automatically. Of course you'll need to exporta default function.
+
+### LAYOUT
+`layout.tsx` is where we place shared design to be applied accros pages inside the placed root.
+For example, for a `layout.tsx` placed inside `/app/dashboard` all the `page` files inside root dashboard/ will be impacted.
+
+layout code example:
+```tsx
+import SideNav from "../ui/dashboard/sidenav";
+
+export default function Layout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    return (
+        <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+            <div className="w-full flex-none md:w-64">
+                <SideNav />
+            </div>
+            <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+        </div>
+    );
+}
+```
+
+A layout also complement and previous root layout.
+For example: the `app/layout.tsx` still working inside `dashboard` pages that happens because `dashboard/layout.tsx` is also renderend as a children of `app/layout.tsx`
+Code example of `app/layout.tsx` that only defines the main font:
+```tsx
+import '@/app/ui/global.css';
+import { inter } from 'app/ui/fonts';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={`${inter.className} antialiased`}>{children}</body>
+    </html>
+  );
+}
+```
+remember that a root layout is required in every next.js application. Any UI you add to the root layout will be shared across all pages in your application. You can use the root layout to modify your `<html>` and `<body>` tags, and add metadata
+
+One benefit of using layouts in Next.js is that on navigation, only the page components update while the layout won't re-render. This is called partial rendering which preserves client-side React state in the layout when transitioning between pages.
+
+### NAVIGATING
+
+#### LINK COMPONENT
+`next/link` component made an eficient navigation between components. When you use `<a>` to navigate, the page refresh on each page navigation, `<Link>` allows you to do client-side navigation with javascript.
+
+Next.js automatically code splits your application by routesegments. This is different from a traditional React SPA, where the browser loads all your application code on the initial page load.
+
+Splitting code by routes means that pages become isolated. If a certain page throws an error, the rest of the application will still work. This is also less code for the browser to parse, which makes your application faster.
+
+Furthermore, in production, whenever <Link> components appear in the browser's viewport, Next.js automatically prefetches the code for the linked route in the background. By the time the user clicks the link, the code for the destination page will already be loaded in the background, and this is what makes the page transition near-instant!
+
+#### SHOWING ACTIVE LINKS
+A common UI pattern is to show an active link to indicate to the user what page they are currently on. To do this, you need to get the user's current path from the URL. Next.js provides a hook called usePathname() that you can use to check the path and implement this pattern.
+
+Since `usePathname()` is a React hook, you'll need to turn `nav-links.tsx` into a `Client Component`. Add React's "use client" directive to the top of the file, then import `usePathname()` from `next/navigation`:
+
+### RESULT
+That's how a class seems when using `<Link>` and `usePathname`:
+
+```tsx
+'use client';
+ 
+import {
+  UserGroupIcon,
+  HomeIcon,
+  DocumentDuplicateIcon,
+} from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
+ 
+// ... -> Array with links
+ 
+export default function NavLinks() {
+  const pathname = usePathname();
+ 
+  return (
+    <>
+      {links.map((link) => {
+        const LinkIcon = link.icon;
+        return (
+          <Link
+            key={link.name}
+            href={link.href}
+            className={clsx(
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+              {
+                'bg-sky-100 text-blue-600': pathname === link.href, // conditional
+              },
+            )}
+          >
+            <LinkIcon className="w-6" />
+            <p className="hidden md:block">{link.name}</p>
+          </Link>
+        );
+      })}
+    </>
+  );
+}
+```
