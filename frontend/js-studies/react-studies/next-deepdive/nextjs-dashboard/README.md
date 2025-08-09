@@ -316,3 +316,128 @@ export default function NavLinks() {
   );
 }
 ```
+
+## DEPLOY
+We use vercel to deploy, it's easy to do by just associating a root folder on our repository and deployng, after that we also deployed a database by accessing `storage` at our vercel app dashboard and creating a database, we also copy .env on vercel and paste on our local .env in order to use dinamically locally.
+
+Our database will be seeded for our seed process, wich create and insert custom data.
+
+## FETCHING DATA
+
+Using Server Components to fetch data
+By default, Next.js applications use React Server Components. Fetching data with Server Components is a relatively new approach and there are a few benefits of using them:
+
+- Server Components support JavaScript Promises, providing a solution for asynchronous tasks like data fetching natively. You can use async/await syntax without needing useEffect, useState or other data fetching libraries.
+- Server Components run on the server, so you can keep expensive data fetches and logic on the server, only sending the result to the client.
+- Since Server Components run on the server, you can query the database directly without an additional API layer. This saves you from writing and maintaining additional code.
+
+### REQUEST WATTERFALL'S
+A "waterfall" refers to a sequence of network requests that depend on the completion of previous requests. In the case of data fetching, each request can only begin once the previous request has returned data.
+
+For example, we need to wait for fetchRevenue() to execute before fetchLatestInvoices() can start running, and so on.
+
+```tsx
+const revenue = await fetchRevenue();
+const latestInvoices = await fetchLatestInvoices(); // wait for fetchRevenue() to finish
+const {
+  numberOfInvoices,
+  numberOfCustomers,
+  totalPaidInvoices,
+  totalPendingInvoices,
+} = await fetchCardData(); // wait for fetchLatestInvoices() to finish
+```
+
+This pattern is not necessarily bad. There may be cases where you want waterfalls because you want a condition to be satisfied before you make the next request. For example, you might want to fetch a user's ID and profile information first. Once you have the ID, you might then proceed to fetch their list of friends. In this case, each request is contingent on the data returned from the previous request.
+
+However, this behavior can also be unintentional and impact performance.
+
+A common way to avoid waterfalls is to initiate all data requests at the same time - in parallel.
+
+In JavaScript, you can use the `Promise.all()` or `Promise.allSettled()` functions to initiate all promises at the same time. For example, in `data.ts`, we're using `Promise.all()` in the `fetchCardData()` function:
+
+```tsx
+export async function fetchCardData() {
+  try {
+    const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
+    const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
+    const invoiceStatusPromise = sql`SELECT
+         SUM(CASE WHEN status = 'paid' THEN amount ELSE 0 END) AS "paid",
+         SUM(CASE WHEN status = 'pending' THEN amount ELSE 0 END) AS "pending"
+         FROM invoices`;
+ 
+    const data = await Promise.all([
+      invoiceCountPromise,
+      customerCountPromise,
+      invoiceStatusPromise,
+    ]);
+    // ...
+  }
+}
+```
+
+By using this pattern, you can:
+
+- Start executing all data fetches at the same time, which is faster than waiting for each request to complete in a waterfall.
+- Use a native JavaScript pattern that can be applied to any library or framework.
+
+### STATIC VS DYNAMIC REDERING
+
+**What is Static Rendering?**
+With static rendering, data fetching and rendering happens on the server at build time (when you deploy) or when revalidating data.
+
+Whenever a user visits your application, the cached result is served. There are a couple of benefits of static rendering:
+
+- Faster Websites - Prerendered content can be cached and globally distributed when deployed to platforms like Vercel. This ensures that users around the world can access your website's content more quickly and reliably.
+- Reduced Server Load - Because the content is cached, your server does not have to dynamically generate content for each user request. This can reduce compute costs.
+- SEO - Prerendered content is easier for search engine crawlers to index, as the content is already available when the page loads. This can lead to improved search engine rankings.
+- Static rendering is useful for UI with no data or data that is shared across users, such as a static blog post or a product page. It might not be a good fit for a dashboard that has personalized data which is regularly updated.
+
+The opposite of static rendering is dynamic rendering.
+
+**What is Dynamic Rendering?**
+With dynamic rendering, content is rendered on the server for each user at request time (when the user visits the page). There are a couple of benefits of dynamic rendering:
+
+- Real-Time Data - Dynamic rendering allows your application to display real-time or frequently updated data. This is ideal for applications where data changes often.
+- User-Specific Content - It's easier to serve personalized content, such as dashboards or user profiles, and update the data based on user interaction.
+- Request Time Information - Dynamic rendering allows you to access information that can only be known at request time, such as cookies or the URL search parameters.
+
+## STREAMING
+**What is streaming?**
+Streaming is a data transfer technique that allows you to break down a route into smaller "chunks" and progressively stream them from the server to the client as they become ready.
+
+By streaming, you can prevent slow data requests from blocking your whole page. This allows the user to see and interact with parts of the page without waiting for all the data to load before any UI can be shown to the user.
+
+### LOADING
+next has a special file built on top of `React Suspense`. Who allow us to create fallback UI to show as a replacement while page content loads.
+
+Just by creating a page `app/dashboard/loading.tsx`:
+```tsx
+export default function Loading() {
+  return <div>Loading...</div>;
+}
+```
+we already have this loading page while data inside dashboard is fethching. 
+Since `<SideNav>` is static, it's shown immediately. The user can interact with `<SideNav>` while the dynamic content is loading.
+
+To make it prettier we could add an skeleton:
+```tsx
+import DashboardSkeleton from "../ui/skeletons";
+
+export default function Loading() {
+    return <DashboardSkeleton />;
+}
+```
+
+Considering that we want to use only for our `dashboard` page and not for `invoices` or customer, we can use
+`Route Groups` by creating a folder with parentheses `()`  that is not included on path. So /dashboard/(overview)/page.tsx becomes /dashboard.
+
+### REACT SUSPENSE
+React suspense provides a granular way to load parts of your applications.
+Here's the example of a chart:
+```tsx
+<Suspense fallback={<RevenueChartSkeleton />}>
+    <RevenueChart />
+</Suspense>
+```
+
+in these case, we made `RevenueChart` responsable for his own datafetch and set a `Skeleton` for his fallback.
