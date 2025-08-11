@@ -441,3 +441,50 @@ Here's the example of a chart:
 ```
 
 in these case, we made `RevenueChart` responsable for his own datafetch and set a `Skeleton` for his fallback.
+
+## PARTIAL PRERENDERING
+
+Next.js 14 introduced an experimental version of Partial Prerendering – a new rendering model that allows you to combine the benefits of static and dynamic rendering in the same route.
+
+When a user visits a route:
+
+- A static route shell that includes the navbar and product information is served, ensuring a fast initial load.
+- The shell leaves holes where dynamic content like the cart and recommended products will load in asynchronously.
+- The async holes are streamed in parallel, reducing the overall load time of the page.
+
+**How does Partial Prerendering work?**
+Partial Prerendering uses React's Suspense (which you learned about in the previous chapter) to defer rendering parts of your application until some condition is met (e.g. data is loaded).
+
+The Suspense fallback is embedded into the initial HTML file along with the static content. At build time (or during revalidation), the static content is prerendered to create a static shell. The rendering of dynamic content is postponed until the user requests the route.
+
+Wrapping a component in Suspense doesn't make the component itself dynamic, but rather Suspense is used as a boundary between your static and dynamic code.
+
+Let's see how you can implement PPR in your dashboard route.
+
+**Implementing Partial Prerendering**
+Enable PPR for your Next.js app by adding the ppr option to your next.config.ts file:
+```ts
+import type { NextConfig } from 'next';
+ 
+const nextConfig: NextConfig = {
+  experimental: {
+    ppr: 'incremental'
+  }
+};
+ 
+export default nextConfig;
+```
+The 'incremental' value allows you to adopt PPR for specific routes.
+
+Next, add the `experimental_ppr` segment config option to your dashboard layout:
+
+```tsx
+// /app/dashboard/layout
+import SideNav from '@/app/ui/dashboard/sidenav';
+ 
+export const experimental_ppr = true;
+ 
+// ...
+```
+
+That's it. You may not see a difference in your application in development, but you should notice a performance improvement in production. Next.js will prerender the static parts of your route and defer the dynamic parts until the user requests them.
