@@ -165,6 +165,8 @@
   },
   "active": "6d6bc33d9f215cd9",
   "lastOpenFiles": [
+    "devops/INTRO.md",
+    "devops/kubernetes",
     "devops/docker/appfoda/README.md",
     "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/controller/ControllerFoda.java",
     "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/config/RabbitConfig.java",
@@ -175,7 +177,6 @@
     "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/controller",
     "devops/docker/appfoda/producer-service/target/classes/com/joaovidal/producer_service/config/RabbitConfig.class",
     "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/config",
-    "devops/docker/appfoda/consumer-service/src/test/java/com/joaovidal/consumer_service/ConsumerServiceApplicationTests.java",
     "devops/docker/appfoda/producer-service/HELP.md",
     "devops/docker/appfoda/consumer-service/HELP.md",
     "devops/docker/appfoda/GUIDE.md",
@@ -209,7 +210,6 @@
     "backend/php-studies/courses/alura/php-web/01-composer/vendor/masterminds/html5/src/HTML5/Parser/README.md",
     "backend/php-studies/courses/alura/php-web/01-composer/vendor/psr/http-message/docs/PSR7-Usage.md",
     "backend/php-studies/courses/alura/php-web/01-composer/vendor/psr/http-message/docs/PSR7-Interfaces.md",
-    "backend/php-studies/courses/php-essencial/06-funcionalidades_uteis_php/email/vendor/phpmailer/phpmailer/SECURITY.md",
-    "backend/php-studies/courses/php-essencial/06-funcionalidades_uteis_php/email/vendor/phpmailer/phpmailer/README.md"
+    "backend/php-studies/courses/php-essencial/06-funcionalidades_uteis_php/email/vendor/phpmailer/phpmailer/SECURITY.md"
   ]
 }
