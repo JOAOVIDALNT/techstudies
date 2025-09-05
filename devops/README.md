@@ -1,0 +1,1 @@
+Confira o INTRO.md para os insigths iniciais dos meus estudos e levantamentos
