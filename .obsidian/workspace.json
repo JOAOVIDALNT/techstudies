@@ -163,21 +163,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d6bc33d9f215cd9",
+  "active": "2adff8e57a887099",
   "lastOpenFiles": [
+    "backend/java-studies/concepts/architecture",
+    "devops/kubernetes/appfoda/README.md",
+    "devops/kubernetes/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/controller/ControllerFoda.java",
+    "devops/kubernetes/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/config/RabbitConfig.java",
+    "devops/kubernetes/appfoda/producer-service/target/classes/com/joaovidal/producer_service/controller/ControllerFoda.class",
+    "devops/kubernetes/appfoda/producer-service/target/classes/com/joaovidal/producer_service/config/RabbitConfig.class",
+    "devops/kubernetes/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/controller",
+    "devops/kubernetes/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/ProducerServiceApplication.java",
+    "devops/kubernetes/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/config",
+    "devops/kubernetes/appfoda/producer-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst",
+    "devops/kubernetes/appfoda/producer-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+    "devops/kubernetes/appfoda/producer-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+    "devops/kubernetes/appfoda/producer-service/HELP.md",
+    "devops/kubernetes/appfoda/consumer-service/HELP.md",
     "devops/README.md",
     "devops/INTRO.md",
-    "devops/kubernetes",
     "devops/docker/appfoda/README.md",
-    "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/controller/ControllerFoda.java",
-    "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/config/RabbitConfig.java",
-    "devops/docker/appfoda/consumer-service/src/main/java/com/joaovidal/consumer_service/config/RabbitConfig.java",
-    "devops/docker/appfoda/producer-service/src/test/java/com/joaovidal/producer_service/ProducerServiceApplicationTests.java",
-    "devops/docker/appfoda/producer-service/target/classes/com/joaovidal/producer_service/controller/ControllerFoda.class",
-    "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/ProducerServiceApplication.java",
-    "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/controller",
-    "devops/docker/appfoda/producer-service/target/classes/com/joaovidal/producer_service/config/RabbitConfig.class",
-    "devops/docker/appfoda/producer-service/src/main/java/com/joaovidal/producer_service/config",
     "devops/docker/appfoda/producer-service/HELP.md",
     "devops/docker/appfoda/consumer-service/HELP.md",
     "devops/docker/appfoda/GUIDE.md",
@@ -206,10 +210,6 @@
     "frontend/js-studies/projects/jjournal/GUIA DE ESTUDOS ORIENTADO PELO PROJETO.md",
     "frontend/js-studies/projects/app-chamados-angular/README.md",
     "frontend/js-studies/react-studies/README.md",
-    "frontend/README.md",
-    "backend/php-studies/courses/alura/php-web/01-composer/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
-    "backend/php-studies/courses/alura/php-web/01-composer/vendor/masterminds/html5/src/HTML5/Parser/README.md",
-    "backend/php-studies/courses/alura/php-web/01-composer/vendor/psr/http-message/docs/PSR7-Usage.md",
-    "backend/php-studies/courses/alura/php-web/01-composer/vendor/psr/http-message/docs/PSR7-Interfaces.md"
+    "frontend/README.md"
   ]
 }

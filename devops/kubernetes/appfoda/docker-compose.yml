@@ -1,0 +1,38 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # Porta AMQP
+      - "15672:15672" # Painel web
+    environment: # Credenciais padrão
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  producer-service:
+    build:
+      context: ./producer-service # Com docker-compose é possível definir o build diretamente, diferente do k8s que precisa da imagem pronta
+    environment: # Variaveis de ambiente mapeadas no application.yml
+      - RABBITMQ_HOST=rabbitmq # Em container docker dentro do mesmo network, use o nome do serviço
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+      - SERVER_PORT=8081
+    ports: # Diferente da SERVER_PORT, essa é a porta mapeada pro host local, enquanto a outra é a porta da aplicação dentro do container
+      - "8081:8081"
+    depends_on:
+      - rabbitmq
+
+  consumer-service:
+    build:
+      context: ./consumer-service # Com docker-compose é possível definir o build diretamente, diferente do k8s que precisa da imagem pronta
+    environment: # Variaveis de ambiente mapeadas no application.yml
+      - RABBITMQ_HOST=rabbitmq # Em container docker dentro do mesmo network, use o nome do serviço
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+      - SERVER_PORT=8082
+    ports: # Diferente da SERVER_PORT, essa é a porta mapeada pro host local, enquanto a outra é a porta da aplicação dentro do container
+      - "8082:8082"
+    depends_on:
+      - rabbitmq
