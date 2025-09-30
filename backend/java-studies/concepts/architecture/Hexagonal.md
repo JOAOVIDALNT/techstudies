@@ -33,6 +33,7 @@ config
 Observações
 - podemos também estruturar com um package "application" e transferir o services e usecases pra lá.
 - Pensei em também adaptar sufixos useCases para ServicePort, nomemclatura passa a fazer mais sentido no contexto geral.
+- Deve ser conveniente separar todos os useCases pra seguir o principio de responsabilidade única
 
 
 
