@@ -1,4 +1,4 @@
-### 🔎 Navegação
+### 🔎 Busca
 
 - **Shift + Shift** → Search Everywhere (busca qualquer coisa: arquivos, classes, ações, configs)
     
@@ -11,56 +11,6 @@
 - **Alt + F7** → Find Usages (quem está usando aquele método/variável)
     
 - **Ctrl + E** → Arquivos recentes
-    
-
-### ✍️ Edição de código
-
-- **Ctrl + D** → Duplicar linha
-    
-- **Ctrl + Y** → Apagar linha
-    
-- **Alt + Shift + Setas** → Mover linha
-    
-- **Ctrl + /** ou **Ctrl + Shift + /** → Comentar/descomentar código
-    
-- **Ctrl + Alt + L** → Reformatar código
-    
-- **Ctrl + Alt + O** → Otimizar imports
-    
-
-### ⚡ Refatoração
-
-- **Shift + F6** → Renomear variável/método/classe
-    
-- **Ctrl + Alt + M** → Extrair método
-    
-- **Ctrl + Alt + V** → Extrair variável
-    
-- **Ctrl + Alt + C** → Extrair constante
-    
-- **Ctrl + Alt + T** → Envolver em if/for/while/try
-    
-
-### 🛠️ Geração e produtividade
-
-- **Alt + Insert** → Gerar construtores, getters/setters, toString, etc.
-    
-- **psvm** + Tab → Gera `public static void main`
-    
-- **sout** + Tab → Gera `System.out.println()`
-    
-- **Ctrl + J** → Mostrar todos os templates de código disponíveis
-    
-
-### 📑 Estrutura e contexto
-
-- **Ctrl + F12** → Mostrar estrutura do arquivo (métodos, atributos)
-    
-- **Ctrl + Q** → Documentação rápida
-    
-- **Ctrl + P** → Mostrar parâmetros do método
-    
-- **Ctrl + H** → Hierarquia de classes
 
 ### 📂 Painéis laterais e navegação
 
@@ -112,3 +62,52 @@
 - **Shift + Esc** → Fecha o painel atual
     
 - **Ctrl + Shift + A** → Buscar qualquer ação/comando da IDE
+
+### ✍️ Edição de código
+
+- **Ctrl + D** → Duplicar linha
+    
+- **Ctrl + Y** → Apagar linha
+    
+- **Alt + Shift + Setas** → Mover linha
+    
+- **Ctrl + /** ou **Ctrl + Shift + /** → Comentar/descomentar código
+    
+- **Ctrl + Alt + L** → Reformatar código
+    
+- **Ctrl + Alt + O** → Otimizar imports
+    
+
+### ⚡ Refatoração
+
+- **Shift + F6** → Renomear variável/método/classe
+    
+- **Ctrl + Alt + M** → Extrair método
+    
+- **Ctrl + Alt + V** → Extrair variável
+    
+- **Ctrl + Alt + C** → Extrair constante
+    
+- **Ctrl + Alt + T** → Envolver em if/for/while/try
+    
+
+### 🛠️ Geração e produtividade
+
+- **Alt + Insert** → Gerar construtores, getters/setters, toString, etc.
+    
+- **psvm** + Tab → Gera `public static void main`
+    
+- **sout** + Tab → Gera `System.out.println()`
+    
+- **Ctrl + J** → Mostrar todos os templates de código disponíveis
+    
+
+### 📑 Estrutura e contexto
+
+- **Ctrl + F12** → Mostrar estrutura do arquivo (métodos, atributos)
+    
+- **Ctrl + Q** → Documentação rápida
+    
+- **Ctrl + P** → Mostrar parâmetros do método
+    
+- **Ctrl + H** → Hierarquia de classes

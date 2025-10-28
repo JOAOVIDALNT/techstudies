@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "Intellij"
             }
+          },
+          {
+            "id": "f2dda8959280ba39",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -179,7 +191,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b448b9837d1593c2",
+  "active": "f2dda8959280ba39",
   "lastOpenFiles": [
     "backend/java-studies/tools/Intellij.md",
     "backend/java-studies/tools",
